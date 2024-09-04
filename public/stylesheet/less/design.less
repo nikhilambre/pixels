@@ -1,0 +1,1083 @@
+// Theme Name: None
+// Theme URL: None
+// Author: Pixel Coders
+// Description: Form Design
+// Version: 1.0
+//______________________________________________________________
+
+@import "classes";
+@import "mixins";
+@import "variables";
+
+
+.body-wrap{
+    position: relative;
+    background-image:url('../../images/bg2.jpg');
+    background-attachment:fixed ;
+    width:100%;
+    height:100%;
+    padding-top: 83px;
+    background-size: cover;
+}
+
+.header-1 .navbar{
+    .bg(@b-2);
+    .tra(@tra-1);
+
+    .navbar-header{
+        .navbar-toggle{}
+        .navbar-brand{
+            height: auto;
+            padding: 0;
+
+            img{
+                width: 100px;
+                margin: -7px 0 -10px 0;
+                height: auto;
+            }
+
+            .brand-img-w{
+                display: block;
+            }
+            .brand-img-b{
+                display: none;
+            }
+        }
+    }
+
+    .collapse{
+        .nav{
+            .li-single, .li-single .open{
+                a{
+                    display: block;
+                    font-weight: 700;
+                    color: #fff;
+                    .bg(@t);
+                    padding: 30px 15px 15px 15px;
+                    text-transform: uppercase;
+
+                    .i-so {
+                        width: 34px;
+                        height: 34px;
+                        margin: -10px -10px 0 -10px;
+                        padding-top: 10px;
+                        color: #fff;
+                        .bg(@c-1);
+                        border-radius: 50%;
+                    }
+                }
+
+                &:hover a{
+                    font-weight: 700;
+                    color: @c-1 !important;
+                }
+            }
+
+            .dropdown{
+                position: initial !important;
+            }
+
+            .dropdown-menu{
+                margin-top: 10px;
+                border-radius: 8px;
+                .bg(@w-3);
+
+                .li-drop{
+                    .drop-a{
+                        display: block;
+                        color: #333;
+                        border-bottom: 1px solid #fff;
+                        padding: 10px 15px 5px 15px;
+                        text-transform: uppercase;
+
+                        i{
+                            width: 34px;
+                            height: 34px;
+                            text-align: center;
+                            padding-top: 10px;
+                            color: #fff;
+                            border-radius: 50%;
+                        }
+
+                        &:hover, &:active{
+                            .bg(@t);
+                        }
+                    }
+
+                    &:hover a, &:hover i{
+                        font-weight: 700;
+                        color: @c-1 !important;
+                    }
+
+                    &:hover{
+                        .bg(@w-3);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-1.header-white .navbar{
+    .bg(#fff);
+    .navbar-brand{
+        .brand-img-w{
+            display: none;
+        }
+        .brand-img-b{
+            display: block;
+            width: 90px;
+        }
+    }
+    .collapse li a {
+        color: #333 !important;
+        padding: 30px 15px 15px 15px;
+    }
+}
+
+
+.cbp-hrmenu{
+    ul{
+        li{
+            border: none;
+            .tra(@tra-1);
+            
+            &:hover{
+                .bg(@t);
+            }
+
+            &:hover>a{
+                color: @c-1 !important;
+            }
+
+            &>a{
+                display: block;
+                color: #fff;
+                font-weight: 700;
+                padding: 30px 15px 15px 15px;
+                text-transform: uppercase;
+            }
+
+            .cbp-hrsub{
+                -webkit-animation-duration: 0.3s;
+                        animation-duration: 0.3s;
+                .box-shadow(@shadow-outer-gray);
+                .bg(@b-5);
+
+                .cbp-hrsub-inner{
+                    
+                    //  Section of big drop down menu 
+                    //_________________________________________
+                    .cbp-hrsub-inner-div{
+                        padding: 10px 5px;
+                        text-align: left;
+
+
+                        //  Page logo inside dropdown
+                        //__________________________________
+                        .header-logo{
+                            padding: 20px 10px;
+                            margin-bottom: 20px;
+                            h1{
+                                font-size: 30px;
+                                color: #fff;
+                                strong{
+                                    .bg(@ct-2);
+                                }
+                                span{
+                                    font-family: 'Francois One', sans-serif;
+                                    color: @c-1;
+                                }
+                                small{
+                                    color: #333;
+                                }
+                            }                            
+                        } 
+
+                        //  Purchase link inisde big dropdown
+                        //________________________________________
+                        .dropdown-link{
+                            padding: 7px 10px !important;
+                            color: #333 !important;
+                            margin-bottom: 20px;
+                            margin-left: 20px !important;
+                            .tra(@tra-2);
+
+                            &:hover{
+                                .bg(@c-1);
+                                color: #fff !important;
+                            }
+                        }
+
+
+                        //  Short text inside big drop down
+                        //______________________________________
+                        .dropdown-about{
+                            padding-left: 10px !important;
+                            font-size: 1em !important;
+                        }
+
+                        img{
+                            padding: 20px !important;
+                            width: 160px !important;
+                            height: auto;
+                        }
+
+                        .cbp-added{
+                            padding: 20px;
+                            margin-bottom: 10px;
+                            border-radius: 10px;
+                            border: 1px solid #fff;
+                            .box-shadow(@shadow-outer-gray);
+                            .tra(@tra-3);
+
+                            &:hover{
+                                .bg(#fff);
+                            }
+                        }
+
+                        h4{
+                            color: @c-1;
+                            font-weight: 700;
+                            font-size: 1.2em;
+                            margin: 8px 0 5px 0;
+                            padding-bottom: 5px;
+                            font-family: @ff-1 !important;
+                            border-bottom: 2px solid @c-1;
+                        }
+
+                        //  List of navigation links inside big drop down
+                        //_______________________________________________________
+                        ul{
+
+                            li{
+                                padding-left: 10px;
+                                .tra(@tra-1);
+
+                                a{
+                                    font-size: 0.85em;
+                                    line-height: 1.6em;
+                                    padding: 6px 10px;
+                                    border-radius: 5px;
+                                    border: 1px solid @t;
+                                    color: #aaa !important;
+                                    
+                                    &:hover{
+                                        border: 1px solid #fff;
+                                        color: #333 !important;
+                                    }
+                                }
+
+                                &:hover{
+                                    .bg(@w-2);
+                                    padding-left: 5px !important;
+                                }
+
+                                &:hover> a{
+                                    color: @c-1 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.home-1{
+    .bg(@b-2);
+    height: 800px;
+
+    .home-box{
+        padding-top: 14%;
+
+        .home-span{
+            color: #fff;
+            font-family: @ff-3;
+            font-size: 1.3em;
+            border-bottom: 2px solid #fff;
+        }
+
+        .home-h2{
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 4.3em;
+            margin: 20px 0 0 0;
+        }
+
+        .home-p{
+            color: #fff;
+            padding: 20px 200px 80px;
+        }
+
+        .home-link{
+            a{
+                color: #fff;
+                padding: 7px 18px;
+                border: 2px solid #fff;
+                border-radius: 20px;
+                font-family: @ff-3;
+
+                &:hover{
+                    color: @c-1;
+                    .bg(@w-3);
+                }
+            }
+        }
+    }
+}
+
+.home-2{
+    .bg(@b-2);
+
+    .square-type{
+        padding: 6px 0 6px 0;
+        display: flex;
+    }
+
+
+    .box {
+        padding: 20px !important;
+        height: 100%;
+        display: block;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        .box-shadow(@shadow-outer-gray);
+        .tra(@tra-3);
+        .bg(@w-1);
+
+        h3 {
+            font-family: @ff-3;
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        img {
+        }
+
+        &:hover{
+            .bg(@w-3);
+
+            h3, p{
+                color: @c-1;
+            }
+        }
+    }
+
+    .box-epi{
+        .tra(@tra-2);
+
+        .epi-1{
+            .tra(@tra-2);
+
+            img{
+                width: 180px;
+            }
+
+            h3{
+                font-size: 54px;
+            }
+        }
+
+        .epi-2{
+            display: none;
+            .tra(@tra-2);
+
+            img{
+                width: 160px;
+            }
+
+            h3{
+                font-size: 30px;
+                margin-top: 10px;
+                color: @c-1;
+
+                span{
+                    font-size: 40px;
+                }
+            }
+        }
+
+        &:hover .epi-1{
+            display: none;
+        }
+
+        &:hover .epi-2{
+            display: block;
+        }
+    }
+
+    .box-net{
+        h3{
+            font-size: 54px;
+        }
+    }
+
+    .box-angular{
+        h3{
+            font-size: 40px;
+        }
+    }
+
+    .box-fbapp{
+        h3{
+            font-size: 40px;
+        }
+
+        img{
+            margin-top: 20px;
+            display: none;
+        }
+
+        &:hover h3 {
+            width: 60%
+        }
+
+        &:hover img{
+            display: block;
+            width: 200px;
+        }
+
+        &:hover p{
+            display: none;
+        }
+    }
+
+    .box-create{
+        h3{
+            margin-top: 0;
+        }
+    }
+
+    .box-data{
+        img{
+            width: 60%;
+            margin-left: 20%;
+            margin-bottom: 35px;
+        }
+    }
+
+    .box-html{
+        img{
+            width: 70%;
+            margin: 15%;
+        }
+
+        h3{
+            font-size: 35px;
+            display: none;
+        }
+
+        &:hover h3{
+            display: block;
+        }
+
+        &:hover img{
+            display: none;
+        }
+    }
+}
+
+.home-3{
+    .bg(#fff);
+
+    .page-header{
+        margin: 80px 0;
+    }
+
+    .box-cover{
+        .cover{
+            text-align: center;
+            margin-bottom: 100px !important;
+
+            img{
+                width: 26%;
+                margin-left: 37%;
+                margin-bottom: 10px;
+            }
+
+            h3{
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+.home-4{
+    .bg(@ct-2);
+    .tra(@tra-3);
+
+    .page-header{
+        color: #fff;
+        border-color: #fff;
+        margin-bottom: 80px; 
+    }
+
+    .square-type{
+        padding: 6px 0 6px 0;
+    }
+
+    .box {
+        padding: 20px !important;
+        height: 100%;
+        display: flex;
+        border-radius: 10px;
+        .tra(@tra-3);
+        border: 1px solid #fff;
+
+        h3 {
+            font-family: @ff-3;
+            color: #fff;
+        }
+
+        p {
+            z-index: 10!important;
+            color: #fff;
+        }
+
+        img {
+            z-index: 5!important;
+        }
+
+        &:hover{
+            .bg(@w-3);
+
+            h3, p{
+                color: @c-1;
+            }
+        }
+    }
+
+    .box-like{
+        .rslides{
+            padding-left: 25%;
+            li a i{
+                font-size: 150px;              
+                color: @c-1;
+            }
+
+            li a p{
+                font-size: 26px;
+                font-family: @ff-2;
+            }
+        }
+    }
+
+    .box-cms{
+        display: block !important;
+
+        h3{
+            font-size: 30px;
+        }
+
+        ul{
+            padding-left: 40px;
+
+            li{
+                color: #fff;
+                font-size: 22px;
+
+                i{
+                    width: 34px;
+                    color: #fff;
+                }
+            }
+        }
+
+        &:hover i, &:hover li{
+            color: @c-1;
+        }
+    }
+
+    .box-bootstrap{
+        h3{
+            font-size: 30px;
+        }
+    }
+
+    .box-contact{
+        .rslides{
+            padding-left: 20px;
+            padding-top: 40px;
+        }
+
+        i{
+            font-size: 80px;
+            color: @c-1;
+        }
+
+        p{
+            font-size: 20px;
+            font-family: @ff-2;
+        }
+    }
+
+    .box-ecom{
+        display: block !important;
+
+        img{
+            width: 80%;
+            padding-left: 10%;
+        }
+    }
+
+
+    &:hover{
+        .bg(@b-3);
+    }
+}
+
+.home-5{
+    .bg(@w-4);
+    padding: 100px 0;
+
+    .mob-1{
+        position: relative;
+        .img-1{
+            margin-left: 20px;
+        }
+    }
+
+    .mob-2{
+        position: absolute;
+        top: 53%;
+        left: 22%;
+
+        .img-2{
+            width: 100%;
+        }
+    }
+    .scroll-rot{
+        .rotate(-90deg);
+         opacity:0;
+        .tra(@tra-4);
+    }
+
+    .scroll-rot.rot{
+        -webkit-transform-origin: 0% 100% 0;
+                transform-origin: 0% 100% 0;
+        -webkit-transition: -webkit-transform .5s ease-in;
+                transition: transform .5s ease-in;
+                opacity: 1;
+        .rotate(0deg);
+    }
+
+    h2{
+        color: @c-1;
+        font-family: @ff-2;
+        font-size: 5em;
+    }
+
+    h4{
+        font-size: 1.6em;
+    }
+
+    .ul-icon{
+        li{
+            i{
+                color: @c-1;
+            }
+        }
+    }
+}
+
+.home-6{
+    .bg(@ct-1);
+    .tra(@tra-3);
+
+    p{
+        font-size: 1.3em;
+        color: #fff;
+        font-family: @ff-3;
+    }
+
+    h2{
+        color: #fff;
+    }
+    
+    a{
+        color: #fff;
+        padding: 7px 18px;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        font-family: @ff-3;
+
+        &:hover{
+            color: @c-1;
+            .bg(@w-3);
+        }
+    }
+
+    &:hover{
+        .bg(@b-3);
+    }
+}
+
+
+//      Pages Design
+//___________________________________________________
+
+.page-top{
+    min-height: 200px;
+    .bg(@b-2);
+
+    .top-wrap{
+        margin-top: 110px;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        .bg(@w-1);
+
+        h2{
+            margin: 0;
+            color: #fff;
+        }
+    }
+}
+
+.top-wapper{
+    padding: 20px 0;
+    .bg(@b-2);
+
+    .top-post{
+        .top-content{
+            h2{
+                color: #fff;
+                font-size: 60px;
+                font-family: @ff-2;
+            }
+            h4{
+                line-height: 30px;
+                font-size: 20px;
+                color: #fff;
+            }
+            a{
+                color: #fff;
+                display: inline-block;
+                border-radius: 5px;
+                margin-top: 40px !important;
+                font-size: 20px;
+                padding: 10px 20px;
+                border: 1px solid #fff;
+            }
+        }
+    }
+
+    .top-post.ty-1{
+        position: relative;
+
+        .top-img{
+            width: 100%;
+        }
+
+        .top-content{
+            padding: 60px;
+            width: 600px;
+            text-align: right;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .top-post.ty-2{
+        position: relative;
+        height: 450px;
+        .bg(@b-2);
+
+        .top-img{
+            padding: 20px;
+            width: 50%;
+        }
+
+        .top-content{
+            padding: 60px;
+            width: 600px;
+            text-align: right;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    }
+
+}
+
+.page-body{
+    .bg(@w-4);
+}
+
+
+//      Contact Us page Design
+//___________________________________________________
+
+
+.contact-form{
+    .bg(@b-2);
+
+    .cont{
+        .input-group{
+            input, textarea{
+                padding-left: 64px;
+                border-radius: 6px;
+                border: 2px solid #fff;
+                color: @c-1;
+                .bg(@w-1);
+                .placeholder(#fff);
+
+                &:focus{
+                    box-shadow: none;
+                    .bg(@w-2);
+                }
+            }
+            i{
+                display: block;
+                width: 64px;
+                position: absolute;
+                top: 0;
+                left: 5px;
+                font-size: 24px;
+                line-height: 52px;
+                text-align: center;
+                color: #fff;
+            }                        
+            .btn{
+                width: 100%;
+                border-radius: 3px;
+                color: #fff;
+                .tra(@tra-2);
+                .bg(@ct-1);
+                border: 2px solid #fff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+//      Footer Design
+//___________________________________________________
+
+
+.footer{
+    .bg(@b-4);
+
+    .ul-social{
+        li{
+            width: 50px;
+            a{
+                i{
+                    color: #fff;
+                    font-size: 25px;
+                }
+            }
+
+            &:hover a i{
+                color: @c-1;
+            }
+        }
+    }
+
+    .foot-bar{
+        .bg(#000);
+
+        span{
+            color: @c-1;
+        }
+
+        .ul-foot{
+            li{
+                a{
+                    color: #444;
+
+                    &:hover{
+                        color: @c-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//  Preloader design content    
+//_________________________________________________________
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    .bg(#fff);
+}
+
+#status {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 70px;
+    top: 36%;
+    background-image: url('../../images/loading.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.loader-text{
+    width: 100%;
+    position: absolute;
+    left: 42%;
+    top: 45%;
+    font-size: 20px;
+    font-family: @ff-1 !important;
+}
+
+
+
+//  Media query for lg size devices
+//____________________________________________________
+@media screen and (min-width: 1200px){
+
+    .square{
+        height: 290px !important;
+        padding: 6px !important;
+    }
+}
+
+
+//  Media query for md size devices
+//_________________________________________________________
+@media screen and (max-width: 1200px) and (min-width: 993px) {
+
+
+    .square{
+        height: 235px!important;
+        padding: 6px;
+    }
+}
+
+
+//  Media query for sm size devices
+//_________________________________________________________
+@media screen and (max-width: 992px) and (min-width: 767px) {
+
+
+    .square{
+        height: 184px!important;
+        padding: 6px!important;
+    }
+
+}
+
+
+//  Media query for xs small size devices
+//_________________________________________________________
+@media screen and (max-width: 768px) {
+    .square{
+        width: 100% !important;
+        height: auto !important;
+        padding: 6px 0px 6px 0 !important;
+    }
+
+    .loader-text {
+        left: 18% !important;
+    }
+
+    .header-white{
+        .navbar-toggle{
+            .bg(@c-1);
+        }
+    }
+
+    .home-2 .box-epi .epi-1 h3 {
+        font-size: 34px !important;
+    }
+
+    .home-2 .box-fbapp:hover h3 {
+        width: 100%;
+    }
+
+    .home-box{
+        padding-top: 200px !important;
+
+        .home-span{
+            font-size: 1.1em !important;
+        }
+
+        .home-h2{
+            font-size: 3em !important;
+        }
+
+        .home-p{
+            padding: 20px 20px 80px !important;
+        }
+
+        .home-link a {
+            width: 70% !important;
+            display: inline-block !important;
+            margin-top: 10px !important;
+        }
+    }
+
+    .navbar-header{
+        .navbar-toggle{
+            margin: 22px 35px 0 0 !important;
+
+            .icon-bar{
+                .bg(#fff) !important;
+            }
+
+            &:hover, &:active{
+                .bg(@c-1) !important;
+            }
+        }
+    }
+
+    .top-post{
+        .top-content{
+            padding: 20px !important;
+            width: 100% !important;
+        }
+    }
+
+    .navbar-collapse{
+        .bg(@w-4);
+
+        .navbar-nav{
+            .li-single{
+                border-bottom: 1px solid @c-1 !important;
+                a{
+                    color: @c-1 !important;
+                }
+
+                .dropdown-menu{
+                    text-align: center !important;
+                    li{
+                        a{
+                            padding: 30px 15px 15px 15px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .home-5{
+        h2{
+            font-size: 3em;
+        }
+
+        h4{
+            font-size: 1.6em;
+        }
+    }
+
+}
